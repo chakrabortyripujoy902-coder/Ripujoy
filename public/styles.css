@@ -1,0 +1,20 @@
+:root {
+  --bg: #ffffff;
+  --card: #f7f3ff;
+  --primary: #b89cff;
+  --text: #2f2f3a;
+}
+body { font-family: Arial, sans-serif; background: var(--bg); color: var(--text); margin:0; }
+.app { max-width: 1100px; margin: 0 auto; padding: 16px; }
+header { text-align: center; margin-bottom: 16px; }
+.card { background: var(--card); border-radius: 12px; padding: 12px; box-shadow: 0 2px 10px #00000010; }
+.row { display:flex; gap:8px; margin: 8px 0; }
+input, textarea, button { padding: 8px; border-radius: 8px; border: 1px solid #ddd; }
+button { background: var(--primary); border:none; cursor: pointer; }
+#chatSection { display:flex; gap:12px; margin-top: 12px; }
+.sidebar { width: 35%; }
+.chat { flex:1; }
+.messages { min-height: 380px; max-height: 380px; overflow-y:auto; background:#fff; border-radius: 8px; padding:8px; margin-bottom:8px; }
+.msg { margin-bottom: 8px; padding: 6px; background:#eee6ff; border-radius: 8px; }
+.hidden { display:none; }
+.user-item, .chat-item { background:#fff; padding:6px; border-radius: 8px; margin:5px 0; }

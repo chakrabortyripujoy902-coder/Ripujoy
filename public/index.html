@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Connect</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Social Connect</h1>
+      <p>Simple realtime chat with groups and media sharing</p>
+    </header>
+
+    <section id="authSection" class="card">
+      <h2>Sign Up / Login</h2>
+      <div class="row"><input id="phone" placeholder="Phone number" /><button onclick="sendOtp()">Send OTP</button></div>
+      <div class="row"><input id="otp" placeholder="Enter OTP" /><button onclick="verifyOtp()">Verify OTP</button></div>
+      <div class="row"><input id="name" placeholder="Name" /><input id="country" placeholder="Country" /><button onclick="registerUser()">Register</button></div>
+      <small id="authStatus"></small>
+    </section>
+
+    <section id="chatSection" class="hidden">
+      <div class="sidebar card">
+        <h3>Users</h3>
+        <div id="users"></div>
+        <h3>Create Group</h3>
+        <input id="groupName" placeholder="Group name" />
+        <div id="groupUsers"></div>
+        <button onclick="createGroup()">Create Group</button>
+        <h3>Chats</h3>
+        <div id="chats"></div>
+      </div>
+      <div class="chat card">
+        <h3 id="chatTitle">Select a chat</h3>
+        <div id="messages" class="messages"></div>
+        <textarea id="messageInput" placeholder="Type a message"></textarea>
+        <input id="fileInput" type="file" />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
